@@ -2,3 +2,4 @@ Capitulo 1: Introduccion a Gir
 Capitulo 2: Flujo de trabajo basico
 Cpitulo 3:[D[D[D[D[D[D[D[D[D[D[D[D[Ca[C[C[C[C[C[C[C[C[D[D[D[D[D[D[D[Dpitulo [C[D3: Gestion de ramas
 Capitulo 4: Repositorios remotos
+Capitulo 5: Conceptos avanzados
