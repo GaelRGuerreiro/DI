@@ -1,0 +1,29 @@
+[
+  {
+  "name": "Assassins Creed 1",
+  "descripcion": "Eres un Assassin que acecha a su presa con una hoja oculta. Un guerrero envuelto en el misterio y temido por su crueldad. Tus acciones pueden sembrar el caos en tu entorno inmediato, y tu propia existencia determinará los acontecimientos futuros durante este momento crucial de la historia.",
+  "image_url": "https://raw.githubusercontent.com/GaelRGuerreiro/DI/main/recursos/creed1.jpg"
+  },
+{
+  "name": "Assassins Creed 2",
+  "descripcion": "Assassin's Creed II presenta a Ezio, un nuevo Assassin que continúa el legado letal de sus antepasados. Enfréntate a una historia épica de poder y corrupción en la que pulirás tu artes de Assassin, y empuñarás armas e instrumentos diseñados por el mismísimo Leonardo da Vinci en esta continuación de la serie apasionante y mortal.",
+  "image_url": "https://raw.githubusercontent.com/GaelRGuerreiro/DI/main/recursos/creed2.jpg"
+  },
+{
+  "name": "Assassins Creed 3",
+  "descripcion": "1775: Las colonias americanas van a iniciar una rebelión. En la piel de Connor, un Assassin nativo americano, lucha por la libertad de tu nación. Asesina a tus enemigos con estilos diferentes y una enorme variedad de armas en entornos que van desde las bulliciosas calles de la gran ciudad hasta el caos del campo de batalla",
+  "image_url": "https://raw.githubusercontent.com/GaelRGuerreiro/DI/main/recursos/creed3.jpg"
+  },
+{
+  "name": "Assassins Creed Black Flag",
+  "descripcion": "Assassin's Creed IV Black Flag comienza en 1715, cuando los piratas establecieron una república sin ley en el Caribe y dominaron la tierra y el mar. Estos forajidos paralizaban navíos, interrumpían el comercio internacional y saqueaban vastas fortunas. Pusieron en peligro las estructuras de poder que gobernaban Europa, desataron la imaginación de millones de personas y dejaron un legado que aún perdura.",
+  "image_url": "https://raw.githubusercontent.com/GaelRGuerreiro/DI/main/recursos/creed4.jpg"
+  },
+{
+  "name": "Assassins Creed Rogue",
+  "descripcion": "Contempla la transformación de Shay, de Assassin aventurero a lúgubre templario convencido dispuesto a cazar a sus antiguos hermanos. Vive en primera persona los sucesos que llevarán a Shay hacia una senda oscura que cambiará para siempre el destino de la Hermandad.",
+  "image_url": "https://raw.githubusercontent.com/GaelRGuerreiro/DI/main/recursos/creed5.jpg"
+  },
+]
+
+
