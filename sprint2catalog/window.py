@@ -1,27 +1,55 @@
 #window.py
-from tkinter import ttk
+import requests
+from io import BytesIO
 import tkinter as tk
-from cell_ej7 import Cell
-from tkinter import messagebox
-from PIL import Image,ImageTk
+from PIL import Image, ImageTk 
+from cell import Cell
 from detail_window import DetailWindow
- 
-class MainWindow:
-    def on_button_clicked(self, cell):
-         detail_window = DetailWindow(self.root, cell.title, cell.image_tk, cell.description)
+from tkinter import Label
 
-    def __init__(self,root):
-        self.root=root
-        root.title("Primeros 5 juegos de Assassins Creed")
-        self.cells = [
-            Cell("Assasins Creed","C:\\msys64\\home\\gaelr\\DI\\sprint1Tkinter\\dialog\\catalog\\unedited\\creed1.jpg","Eres un Assassin que acecha a su presa con una hoja oculta. Un guerrero envuelto en el misterio y temido por su crueldad. Tus acciones pueden sembrar el caos en tu entorno inmediato, y tu propia existencia determinará los acontecimientos futuros durante este momento crucial de la historia."),
-            Cell("Assasins Creed 2","C:\\msys64\\home\\gaelr\\DI\\sprint1Tkinter\\dialog\\catalog\\unedited\\creed2.jpg","Assassin's Creed II presenta a Ezio, un nuevo Assassin que continúa el legado letal de sus antepasados. Enfréntate a una historia épica de poder y corrupción en la que pulirás tu artes de Assassin, y empuñarás armas e instrumentos diseñados por el mismísimo Leonardo da Vinci en esta continuación de la serie apasionante y mortal."),
-            Cell("Assasins Creed 3","C:\\msys64\\home\\gaelr\\DI\\sprint1Tkinter\\dialog\\catalog\\unedited\\creed3.jpg","1775: Las colonias americanas van a iniciar una rebelión. En la piel de Connor, un Assassin nativo americano, lucha por la libertad de tu nación. Asesina a tus enemigos con estilos diferentes y una enorme variedad de armas en entornos que van desde las bulliciosas calles de la gran ciudad hasta el caos del campo de batalla."),
-            Cell("Assasins Creed Black Flag","C:\\msys64\\home\\gaelr\\DI\\sprint1Tkinter\\dialog\\catalog\\unedited\\creed4.jpg","Assassin's Creed IV Black Flag comienza en 1715, cuando los piratas establecieron una república sin ley en el Caribe y dominaron la tierra y el mar. Estos forajidos paralizaban navíos, interrumpían el comercio internacional y saqueaban vastas fortunas. Pusieron en peligro las estructuras de poder que gobernaban Europa, desataron la imaginación de millones de personas y dejaron un legado que aún perdura."),
-            Cell("Assasins Creed Rogue","C:\\msys64\\home\\gaelr\\DI\\sprint1Tkinter\\dialog\\catalog\\unedited\\creed5.jpg","Contempla la transformación de Shay, de Assassin aventurero a lúgubre templario convencido dispuesto a cazar a sus antiguos hermanos. Vive en primera persona los sucesos que llevarán a Shay hacia una senda oscura que cambiará para siempre el destino de la Hermandad."),
-        ]
-        for i, cell in enumerate(self.cells):
-            cell.load_image()
-            label = ttk.Label(root, image=cell.image_tk, text=cell.title, compound=tk.BOTTOM)
-            label.grid(row=0, column=i)
-            label.bind("<Button-1>", lambda event, cell=cell: self.on_button_clicked(cell))
+
+    
+#Funcion que devuelve la imagen de cada item del json    
+def load_image_from_url(url):
+    response = requests.get(url)
+    image_data = Image.open(BytesIO(response.content))
+    image = ImageTk.PhotoImage(image_data)
+    return image
+
+
+class MainWindow():
+
+    def on_button_clicked(self, name, descripcion, image):
+        detail_window = DetailWindow(self.root, name, descripcion, image)
+
+    def __init__(self, root, json_data):
+        
+        #Variables
+        self.root = root
+        root.title("MainWindow")
+        self.cells = []
+
+        #Centrar la ventana
+        x = (self.root.winfo_screenwidth() - self.root.winfo_reqwidth()) / 2
+        y = (self.root.winfo_screenheight() - self.root.winfo_reqheight()) / 2
+        self.root.geometry(f"+{int(x)}+{int(y)}")
+
+        labels = []
+        #Bucle para recorrer todos los items del JSON descargado y añadirlo a la celda
+        for item in json_data:
+            
+            #Guardamos en variables cada elemento del item del JSON
+            name = item["name"]
+            descripcion = item["descripcion"]
+            image_url = item["image_url"]
+            image = load_image_from_url(image_url)
+
+            #creamos una nueva variable celda con los datos de la variable de arriba y la añadimos al array donde estarán todas las celdas
+            cell = Cell(name, descripcion, image_url, image)
+            self.cells.append(cell)
+
+
+            label = Label(root, image=cell.image, text=name, compound=tk.BOTTOM) 
+            label.grid(row=0, column=len(labels))
+            label.bind("<Button-1>", lambda event, cell=cell, name=name, descripcion=descripcion, image=image: self.on_button_clicked(name, descripcion, image))
+            labels.append(label)  
