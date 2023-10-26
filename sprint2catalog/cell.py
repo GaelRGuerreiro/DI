@@ -3,11 +3,9 @@ from PIL import Image, ImageTk
 
 class Cell:
 
-    def _init_(self, title, path, description):
-
-        self.title = title
-        self.path = path
-        self.description = description
+ def __init__(self, name, descripcion, image_url, image):
         
-        resizedImage = (Image.open(self.path)).resize((100, 100), Image.Resampling.LANCZOS)
-        self.imageTk = ImageTk.PhotoImage(resizedImage)
+        self.name = name
+        self.descripcion = descripcion
+        self.image_url = image_url
+        self.image = image      
