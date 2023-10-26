@@ -11,6 +11,11 @@ class DetailWindow:
         self.descripcion = descripcion
         self.image = image
 
+        x = (self.root.winfo_screenwidth() - self.root.winfo_reqwidth()) / 2
+        y = (self.root.winfo_screenheight() - self.root.winfo_reqheight()) / 2
+        self.root.geometry(f"+{int(x)}+{int(y)}")
+
+
         self.window = tk.Toplevel(root)
         self.window.title(self.title)
 
