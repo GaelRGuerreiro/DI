@@ -13,7 +13,7 @@ public class CatalogActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catalog);
 
-        Button buttonNavigateToDetail = findViewById(R.id.buttonDetail); // Utiliza el ID correcto del botón
+        Button buttonNavigateToDetail = findViewById(R.id.buttonDetail);
 
         buttonNavigateToDetail.setOnClickListener(new View.OnClickListener() {
             @Override

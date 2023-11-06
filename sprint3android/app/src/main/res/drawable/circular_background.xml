@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@android:color/transparent" /> <!-- Fondo transparente -->
-    <corners android:radius="1000dp" /> <!-- Radio grande para un círculo perfecto -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:innerRadius="700dp"
+    android:shape="ring"
+    android:thicknessRatio="1.9"
+    android:useLevel="false" >
+    <solid android:color="@android:color/transparent" />
+
+    <stroke
+        android:width="400dp"
+        android:color="@android:color/white" />
 </shape>
