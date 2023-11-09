@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textaco"
+        android:text="Las acciones de Connor permitieron a su descendiente, Desmond Miles, poder encontrar la clave del Gran Templo a través del Animus y proteger a la Tierra del segundo desastre.
+
+Erradico la mayor parte de la influencia y el control de la Orden Templaría en América Colonial con el asesinato de sus líderes. Connor Impidió que el Comandante Washington fuera corrompido por el poder del fruto del Edén.
+
+Connor al paso de su “aventura” fue conociendo muchas personas que habían perdido sus hogares debido a la opresión de la corona Británico. Otros que simplemente no podían seguir con su estadía en las ciudades, para luego ofrecerles un hogar en la hacienda Davenport, donde podrían ejercer su oficio, por ejemplo: un herrero, Padre de Iglesia Católica, Carpinteros, Leñadores. Personas que luego le ayudarían a mejorar las instalaciones de la Casa y poder realizar diferentes objetos para su venta en distintas tiendas de Boston y Nueva York a través de caravanas terrestres. Pequeñas ciudades en islas del océano Atlántico a través de caravanas marítimas."
+        android:gravity="left"
+        android:layout_marginBottom="500dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+</LinearLayout>

@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:text="Assassins Creed 3"
         android:textSize="24sp"
-    android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal" />
 
 
     <ImageView

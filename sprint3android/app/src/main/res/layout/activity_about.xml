@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity">
+
+
+
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="230dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Es un buen juego en cual llevas a Connor Kenway, de ascendencia britanica y Mohawk, está ambientado en Estados Unidos, en la guerra de la independencia estadounidense, también se incluye el uso de barcos en este juego el qual es una gran Innovación en esta saga, y también la caza y arcos y flechas, es muy recomendable para todos aquellos que os guste el tema cazador y también para todo fan de dicha saga, incluso para los fanaticos de la historia en si. Es un gran juego."
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clic aquí"
+        android:id="@+id/button"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
