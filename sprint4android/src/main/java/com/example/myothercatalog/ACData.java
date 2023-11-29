@@ -14,7 +14,7 @@ public class ACData {
     private String image_url;
 
     public String getName() {return name;}
-    public String getDescripcion() {return descripcion;}
+    public String getDescription() {return descripcion;}
     public String getImage_url() {return image_url;}
 
     public ACData(String name, String descripcion, String image_url){
