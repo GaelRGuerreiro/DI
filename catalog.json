@@ -23,6 +23,11 @@
   "name": "Assassins Creed Rogue",
   "descripcion": "Contempla la transformación de Shay, de Assassin aventurero a lúgubre templario convencido dispuesto a cazar a sus antiguos hermanos. Vive en primera persona los sucesos que llevarán a Shay hacia una senda oscura que cambiará para siempre el destino de la Hermandad.",
   "image_url": "https://raw.githubusercontent.com/GaelRGuerreiro/DI/main/recursos/creed5.jpg"
+},
+  {
+  "name": "Assassins Creed Unity",
+  "descripcion": "París, 1789. La Revolución francesa ha convertido esta espléndida ciudad en un lugar donde imperan el terror y caos. Por sus calles adoquinadas corre la sangre de los plebeyos que osaron alzarse contra una opresiva aristocracia.",
+  "image_url": "https://raw.githubusercontent.com/GaelRGuerreiro/DI/main/recursos/AC Unity.jpg"
 }
 ]
 
